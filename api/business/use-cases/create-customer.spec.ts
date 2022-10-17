@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { InMemoryCustomerAdapter } from "../../adapters/out/in-memory-adapter/in-memory-customer-adapter";
+import { InMemoryCustomerRepositoryAdapter } from "../../adapters/out/in-memory-adapter/in-memory-customer-repository-adapter";
 import { Customer } from "../entities/customer";
 import { CreateCustomer } from "./create-customer";
 
 describe('Create customer', () => {
     it('Should be able to create an customer', () => {
-        const customerRepository = new InMemoryCustomerAdapter;
+        const customerRepository = new InMemoryCustomerRepositoryAdapter;
 
         const customer = new Customer({
             name: 'Hallex abreu',

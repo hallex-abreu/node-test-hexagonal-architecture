@@ -1,7 +1,7 @@
 import { Customer } from "../../../business/entities/customer";
 import { CustomerRepositoryPorts } from "../../../business/ports/customer-reposity-ports";
 
-export class InMemoryCustomerRepository implements CustomerRepositoryPorts{
+export class InMemoryCustomerRepositoryAdapter implements CustomerRepositoryPorts{
     public items: Customer[] = [];
     
     async findCustomerByEmail(email: string): Promise<Customer | null> {
